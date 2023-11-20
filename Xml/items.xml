@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Override>
+    <!-- experimental treatment, talent item -->
+    <Item name="" identifier="experimentaltreatment" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275" impactsoundtag="impact_metal_light" maxstacksize="8">
+      <PreferredContainer primary="medcab" />
+      <Price baseprice="300" soldbydefault="false"></Price>
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" requiresrecipe="true" amount="4">
+        <RequiredSkill identifier="medical" level="60" />
+        <RequiredSkill identifier="surgery" level="40" />
+        <RequiredItem identifier="propofol" />
+        <RequiredItem identifier="cyanide" />
+        <RequiredItem identifier="adrenaline" />
+        <RequiredItem identifier="uranium" />
+      </Fabricate>
+      <Deconstruct time="10" />
+      <InventoryIcon texture="%ModDir%/Images/MainAtlas.png" sourcerect="0,192,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/Images/MainAtlas.png" sourcerect="256,256,128,128" depth="0.6" origin="0.5,0.5" />
+      <Body width="35" height="70" density="20" />
+      <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+        <StatusEffect tags="medical" type="OnUse" target="Character" />
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </MeleeWeapon>
+      <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+        <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+      </Projectile>
+    </Item>
+  </Override>
+</Items>

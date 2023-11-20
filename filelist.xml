@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="War Criminal Surgeon" modversion="1.0" corepackage="False" gameversion="1.0.13.2">
+  <Item file="%ModDir%/Xml/items.xml" />
+  <Jobs file="%ModDir%/Xml/Jobs.xml" /> 
+  <Item file="%ModDir%/BetterSurgeon.xml" />
+  <Text file="%ModDir%/Localization/English/English.xml" />
+  <Talents file="%ModDir%/Xml/TalentsSurgeon.xml" />
+  <TalentTrees file="%ModDir%/Xml/TalentTrees.xml" />
+  <None file="%ModDir%/Images/Medic.png" />
+  <Other file="%ModDir%/Lua/Autorun/init.lua" />
+  <Other file="%ModDir%/Lua/Scripts/humanupdate.lua" />
+  <Other file="%ModDir%/Lua/Scripts/items.lua" />
+  <Afflictions file="%ModDir%/Xml/afflictions.xml" />
+  <Text file="%ModDir%/Text/English.xml" />
+  <Text file="%ModDir%/Text/SimplifiedChinese.xml" />
+  <Text file="%ModDir%/Text/PTBR.xml" />
+  <Afflictions file="%ModDir%/Genetic/Afflictionsnew.xml" />
+  <Item file="%ModDir%/Genetic/GENESBABY.xml" />
+  <Item file="%ModDir%/Genetic/newgenes.xml" />
+  <Item file="%ModDir%/Genetic/Oldgenesoverride.xml" />
+  <Item file="%ModDir%/Genetic/GeneSplicers.xml" />
+  <Other file="%ModDir%/Genetic/Appendages/watchereffect.xml" />
+  <Character file="%ModDir%/CharactersAppendagesHusked/watchhusk.xml" />
+</contentpackage>

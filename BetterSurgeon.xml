@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Surgeon Uniform" identifier="surgeonuniform" descriptionidentifier="surgeonclothes" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,storage_clothing,sterile" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.01" />
+    <Price baseprice="150" minavailable="1">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="30" />
+      <RequiredItem identifier="organicfiber" />
+    </Fabricate>
+    <InventoryIcon name="surgeonuniform" texture="Content/Items/InventoryIconAtlas.png" sourcerect="127,321,64,64" origin="0.5,0.5" />
+    <Sprite name="surgeonuniform" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="504,84,123,60" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+    <Holdable slots="RightHand,LeftHand" holdpos="40,-30" handle1="0,0" handle2="0,0" msg="ItemMsgPickUpSelect" />
+    <Wearable slots="InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Surgeon Uniform Torso" texture="%ModDir%/Surgeonoutfit_[GENDER].png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Right Hand" texture="%ModDir%/Surgeonoutfit_female.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Left Hand" texture="%ModDir%/Surgeonoutfit_female.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Right Lower Arm" texture="%ModDir%/Surgeonoutfit_female.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Left Lower Arm" texture="%ModDir%/Surgeonoutfit_female.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Right Upper Arm" texture="%ModDir%/Surgeonoutfit_female.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Left Upper Arm" texture="%ModDir%/Surgeonoutfit_female.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Waist" texture="%ModDir%/Surgeonoutfit_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Right Thigh" texture="%ModDir%/Surgeonoutfit_female.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Left Thigh" texture="%ModDir%/Surgeonoutfit_female.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Right Leg" texture="%ModDir%/Surgeonoutfit_female.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Left Leg" texture="%ModDir%/Surgeonoutfit_female.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Right Shoe" texture="%ModDir%/Surgeonoutfit_female.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Surgeon Uniform Left Shoe" texture="%ModDir%/Surgeonoutfit_female.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" sourcerect="278,219,55,32" origin="0.5,0.5" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds,bleeding" damagemultiplier="0.75" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.8" />
+      <StatValue stattype="MedicalItemEffectivenessMultiplier" value="0.5" />
+      <SkillModifier skillidentifier="medical" skillvalue="10" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="storage_clothing,toolbox,toolbelt" />
+      <SlotIcon slotindex="4" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
+      <SlotIcon slotindex="5" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
+      <SubContainer capacity="2">
+        <Containable items="chem,medical" excludeditems="storage_clothing,toolbox,toolbelt" />
+      </SubContainer>
+    </ItemContainer>
+  </Item>
+</Items>
