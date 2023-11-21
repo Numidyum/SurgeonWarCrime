@@ -23,7 +23,7 @@
     </Skills>
     <ItemSet>
       <Item identifier="idcard" equip="true" showpreview="false"/>
-      <Item identifier="surgeonuniform" equip="true" outfit="true"/>
+      <Item identifier="surgeonuniformanime" equip="true" outfit="true"/>
       <Item identifier="surgicalmask" equip="true"/>
       <Item identifier="headset" equip="true" showpreview="false"/>    
       <Item identifier="healthscanner">

@@ -137,8 +137,8 @@
     </Description>
     <AbilityGroupEffect abilityeffecttype="None">
       <Abilities>
-        <CharacterAbilityGivePermanentStat statidentifier="medical" stattype="FabricationSpeed" value="1" setvalue="true"/>
-        <CharacterAbilityGivePermanentStat stattype="DeconstructorSpeedMultiplier" value="1" setvalue="true"/>
+        <CharacterAbilityGivePermanentStat statidentifier="Medical" stattype="FabricationSpeed" value="1" setvalue="true"/>
+        <CharacterAbilityGivePermanentStat statidentifier="Medical" stattype="DeconstructorSpeedMultiplier" value="1" setvalue="true"/>
         </Abilities>
         </AbilityGroupEffect>
     </Talent>
@@ -181,6 +181,8 @@
         <Replace tag="[amount]" value="30" color="gui.green" />
       </Description>
     </Talent>
+
+
     <Talent identifier="ntsp_homecarepackage">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,1" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_homecarepackage"></Description>
@@ -196,6 +198,12 @@
         <Replace tag="[amount]" value="1" color="gui.green" />
         <Replace tag="[itemname]" value="entityname.opium" color="gui.orange" />
       </Description>
+      <Description tag="talentdescription.ntsp_bedsidemanner"/>
+    <Description tag="talentdescription.gainmissionxpanditem">
+      <Replace tag="[amount]" value="40" color="gui.green"/>
+      <Replace tag="[item]" value="entityname.skillbooksurgery" color="gui.green"/>
+    </Description>
+    <Description tag="talentdescription.assistantsdontcount"/>
       <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
         <Abilities>
           <CharacterAbilityPutItem itemidentifier="suture1" amount="3" />
@@ -203,7 +211,24 @@
           <CharacterAbilityPutItem itemidentifier="opium" amount="1" />
         </Abilities>
       </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionNoCrewDied />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue addedvalue="0.4" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+      <Conditions>
+        <AbilityConditionNoCrewDied />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityPutItem itemidentifier="skillbooksurgery"/>
+      </Abilities>
+    </AbilityGroupEffect>
     </Talent>
+
     <Talent identifier="ntsp_mannitol">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="4,0" sheetelementsize="128,128" />
       <Description tag="talentdescription.unlockrecipe">
@@ -498,6 +523,7 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
+
     <Talent identifier="ntsp_injectorgeneral">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_injectorgeneral"></Description>
@@ -559,5 +585,11 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="autoinjectorheadset" />
     </Talent>
+
+
+
+
+
+    
   </Talents>
 </Override>

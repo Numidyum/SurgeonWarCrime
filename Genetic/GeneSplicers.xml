@@ -892,10 +892,10 @@
     </Wearable>
   </Item>
 
-<Item name="Gene Splicer Dovah" identifier="genesplicerdovah" scale="0.4" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+<Item name="Gene Splicer Dovah" identifier="genesplicerdovah" scale="0.01" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="supplycab" />
     <InventoryIcon texture="%ModDir%/Textures/Genetic2.png" sourcerect="244,62,76,65" origin="0.5,0.5" />
-    <Sprite name="Headset" texture="%ModDir%/Textures/Genetic.png" depth="0.6" sourcerect="67,85,73,35" origin="0.5,0.5" />
+    <Sprite name="Headset" texture="%ModDir%/Textures/Genetic.png" depth="0.9" sourcerect="67,85,73,35" origin="0.5,0.5" />
     <Body radius="15" width="45" density="30" />
     <ItemContainer capacity="50" maxstacksize="1" autoinject="true" autoinjectthreshold="Infinity" allowswappingcontaineditems="true">
       <Containable items="geneticmaterial" />

@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="War Criminal Surgeon" modversion="1.0" corepackage="False" gameversion="1.0.13.2">
+<contentpackage name="War Criminal Surgeon" modversion="1.5" corepackage="False" steamworkshopid="3089988568" gameversion="1.1.19.3">
   <Item file="%ModDir%/Xml/items.xml" />
-  <Jobs file="%ModDir%/Xml/Jobs.xml" /> 
+  <Jobs file="%ModDir%/Xml/Jobs.xml" />
   <Item file="%ModDir%/BetterSurgeon.xml" />
+  <Item file="%ModDir%/BetterSurgeonanime.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
   <Talents file="%ModDir%/Xml/TalentsSurgeon.xml" />
   <TalentTrees file="%ModDir%/Xml/TalentTrees.xml" />
-  <None file="%ModDir%/Images/Medic.png" />
+  <Other file="%ModDir%/Images/Medic.png" />
   <Other file="%ModDir%/Lua/Autorun/init.lua" />
   <Other file="%ModDir%/Lua/Scripts/humanupdate.lua" />
   <Other file="%ModDir%/Lua/Scripts/items.lua" />

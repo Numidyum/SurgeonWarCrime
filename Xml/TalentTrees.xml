@@ -4,7 +4,7 @@
     <TalentTree jobidentifier="surgeon">
       <SubTree identifier="surgeon_primary" nameidentifier="talenttree.primary" type="primary">
         <TalentOptions requiredtalents="1" maxchosentalents="3">
-          <TalentOption identifier="ntsp_surgeonsintuition" />
+          <TalentOption identifier="ntsp_surgeonsintuition" /> 
           <TalentOption identifier="ntsp_adrenalinepump" />
           <TalentOption identifier="ntsp_autodidact" />
         </TalentOptions>
@@ -50,9 +50,12 @@
         
         <TalentOptions requiredtalents="1" maxchosentalents="2">
           <TalentOption identifier="ntsp_captainresist" />
+
+          
+
           <TalentOption identifier="ntsp_fallenandcantgetup" />
         </TalentOptions>
-        <TalentOptions requiredtalents="1" maxchosentalents="2">
+        <TalentOptions requiredtalents="1" maxchosentalents="3">
           <TalentOption identifier="ntsp_preventativepermit" />
           <ShowCaseTalent identifier="ntsp_imasurgeonnota">
             <TalentOption identifier="ntsp_apprenticeship_assistant" />
@@ -63,6 +66,9 @@
             <TalentOption identifier="ntsp_apprenticeship_engineer" />
           </ShowCaseTalent>
         </TalentOptions>
+        
+          
+        
         <TalentOptions>
           <TalentOption identifier="ntsp_properfol" />
         </TalentOptions>
