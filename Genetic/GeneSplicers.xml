@@ -891,8 +891,7 @@
       <sprite name="Omega Gene Splicer Wearable" texture="%ModDir%/Textures/Genetic.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hideotherwearables="false" sourcerect="258,131,64,54" origin="0.6,0.0" />
     </Wearable>
   </Item>
-
-<Item name="Gene Splicer Dovah" identifier="genesplicerdovah" scale="0.01" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="Gene Splicer Dovah" identifier="genesplicerdovah" scale="0.01" category="Equipment" tags="smallitem" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" secondary="supplycab" />
     <InventoryIcon texture="%ModDir%/Textures/Genetic2.png" sourcerect="244,62,76,65" origin="0.5,0.5" />
     <Sprite name="Headset" texture="%ModDir%/Textures/Genetic.png" depth="0.9" sourcerect="67,85,73,35" origin="0.5,0.5" />
@@ -904,7 +903,4 @@
       <sprite name="Omega Gene Splicer Wearable" texture="%ModDir%/Textures/Genetic.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hideotherwearables="false" sourcerect="258,131,64,54" origin="0.6,0.0" />
     </Wearable>
   </Item>
-
-
-
 </Items>

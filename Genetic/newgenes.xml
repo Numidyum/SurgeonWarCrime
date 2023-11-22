@@ -59,7 +59,7 @@
     <GeneticMaterial nameidentifier="character.hammerheadgold" effect="goldenhammerheadeffect" />
   </Item>
   <!-- New genes as of 03.02.2023 -->
-  <Item name="Genetic Material (Crawler Broodmother)" identifier="geneticmaterialcrawlerbroodmother" variantof="geneticmaterialcrawler">
+<Item identifier="geneticmaterialcrawlerbroodmother" variantof="geneticmaterialcrawler">
     <Deconstruct>
       <Item identifier="geneticmaterialcrawlerbroodmother" />
     </Deconstruct>
@@ -67,6 +67,7 @@
     <Sprite texture="%ModDir%/Textures/Genetic.png" sheetindex="0,0" sheetelementsize="32,32" depth="0.6" origin="0.5,0.5" />
     <GeneticMaterial nameidentifier="character.crawlerbroodmother" effect="crawlerbroodmothereffect" />
   </Item>
+
   <Item name="Genetic Material (Baby Moloch)" identifier="geneticmaterialmolochbaby" variantof="geneticmaterialcrawler">
     <Deconstruct>
       <Item identifier="geneticmaterialmolochbaby" />
@@ -111,6 +112,7 @@
       </statuseffect>
     </GeneticMaterial>
   </Item>
+  
   <Item name="Genetic Material (Black Moloch)" identifier="geneticmaterialmolochblack" variantof="geneticmaterialcrawler">
     <Deconstruct>
       <Item identifier="geneticmaterialmolochblack" />

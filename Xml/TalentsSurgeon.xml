@@ -27,7 +27,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_warcriminal">
       <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128" />
       <Description tag="talentdescription.geneharvester">
@@ -67,32 +66,27 @@
           <CharacterAbilityMarkAsLooted identifier="NTgeneharvester" />
         </Abilities>
       </AbilityGroupEffect>
-
-<Description tag="talentdescription.geneticmaterialtaintedprobabilityreductiononcombine">
-      <Replace tag="[amount]" value="100" color="gui.green"/>
-    </Description>
-    <Description tag="talentdescription.unlockrecipe">
-      <Replace tag="[itemname]" value="entityname.advancedgenesplicer" color="gui.orange"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None">
-      <Abilities>
-        <CharacterAbilityGiveStat stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1"/>
-      </Abilities>
-    </AbilityGroupEffect>
-    <AddedRecipe itemidentifier="advancedgenesplicer"/>
-
-    <Description tag="talentdescription.geneticmaterialrefineflatbonus">
-      <Replace tag="[amount]" value="40" color="gui.green"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None">
-      <Abilities>
-        <CharacterAbilityGiveStat stattype="GeneticMaterialRefineBonus" value="40"/>
-      </Abilities>
-    </AbilityGroupEffect>
-
+      <Description tag="talentdescription.geneticmaterialtaintedprobabilityreductiononcombine">
+        <Replace tag="[amount]" value="100" color="gui.green" />
+      </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.advancedgenesplicer" color="gui.orange" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="advancedgenesplicer" />
+      <Description tag="talentdescription.geneticmaterialrefineflatbonus">
+        <Replace tag="[amount]" value="40" color="gui.green" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="GeneticMaterialRefineBonus" value="40" />
+        </Abilities>
+      </AbilityGroupEffect>
     </Talent>
-
-
     <Talent identifier="ntsp_underpressure">
       <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,4" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_underpressure">
@@ -118,7 +112,6 @@
         </Abilities>
       </AbilityGroupInterval>
     </Talent>
-
     <Talent identifier="ntsp_surgeonsintuition">
       <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,4" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_surgeonsintuition">
@@ -133,16 +126,15 @@
         </Abilities>
       </AbilityGroupEffect>
       <Description tag="talentdescription.constructmedicinefaster">
-      <Replace tag="[amount]" value="100" color="gui.green"/>
-    </Description>
-    <AbilityGroupEffect abilityeffecttype="None">
-      <Abilities>
-        <CharacterAbilityGivePermanentStat statidentifier="Medical" stattype="FabricationSpeed" value="1" setvalue="true"/>
-        <CharacterAbilityGivePermanentStat statidentifier="Medical" stattype="DeconstructorSpeedMultiplier" value="1" setvalue="true"/>
+        <Replace tag="[amount]" value="100" color="gui.green" />
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGivePermanentStat statidentifier="Medical" stattype="FabricationSpeed" value="1" setvalue="true" />
+          <CharacterAbilityGivePermanentStat statidentifier="Medical" stattype="DeconstructorSpeedMultiplier" value="1" setvalue="true" />
         </Abilities>
-        </AbilityGroupEffect>
+      </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_unspecialisedspecialist">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,1" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_unspecialisedspecialist">
@@ -182,7 +174,6 @@
       </Description>
     </Talent>
 
-
     <Talent identifier="ntsp_homecarepackage">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="7,1" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_homecarepackage"></Description>
@@ -198,12 +189,6 @@
         <Replace tag="[amount]" value="1" color="gui.green" />
         <Replace tag="[itemname]" value="entityname.opium" color="gui.orange" />
       </Description>
-      <Description tag="talentdescription.ntsp_bedsidemanner"/>
-    <Description tag="talentdescription.gainmissionxpanditem">
-      <Replace tag="[amount]" value="40" color="gui.green"/>
-      <Replace tag="[item]" value="entityname.skillbooksurgery" color="gui.green"/>
-    </Description>
-    <Description tag="talentdescription.assistantsdontcount"/>
       <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
         <Abilities>
           <CharacterAbilityPutItem itemidentifier="suture1" amount="3" />
@@ -211,22 +196,6 @@
           <CharacterAbilityPutItem itemidentifier="opium" amount="1" />
         </Abilities>
       </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
-      <Conditions>
-        <AbilityConditionNoCrewDied />
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityModifyValue addedvalue="0.4" />
-      </Abilities>
-    </AbilityGroupEffect>
-    <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
-      <Conditions>
-        <AbilityConditionNoCrewDied />
-      </Conditions>
-      <Abilities>
-        <CharacterAbilityPutItem itemidentifier="skillbooksurgery"/>
-      </Abilities>
-    </AbilityGroupEffect>
     </Talent>
 
     <Talent identifier="ntsp_mannitol">
@@ -277,7 +246,6 @@
           <CharacterAbilityModifyStatToSkill stattype="MovementSpeed" maxvalue="0.25" skillidentifier="surgery" />
         </Abilities>
       </AbilityGroupInterval>
-
     </Talent>
     <Talent identifier="ntsp_captainresist">
       <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="4,6" sheetelementsize="128,128" />
@@ -296,7 +264,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-    
     <Talent identifier="ntsp_fallenandcantgetup">
       <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="6,4" sheetelementsize="128,128" />
       <Description tag="talentdescription.additionalresistanceself">
@@ -325,7 +292,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_imasurgeonnota">
       <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,6" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_imasurgeonnota1">
@@ -336,7 +302,6 @@
         <Replace tag="[jobname]" value="assistant" color="gui.orange" />
       </Description>
     </Talent>
-
     <!-- Im a suregon not a showcase section -->
     <Talent identifier="ntsp_apprenticeship_captain" nameidentifier="jobname.captain" coloroverride="0.65,0.73,0.8">
       <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="384,256,128,128" origin="0.5,0.5" />
@@ -353,7 +318,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_apprenticeship_doctor" nameidentifier="jobname.medicaldoctor" coloroverride="0.81,0.31,0.19">
       <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,256,128,128" origin="0.5,0.5" />
       <Description tag="talentdescription.apprenticeshipjob">
@@ -369,7 +333,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_apprenticeship_security" nameidentifier="jobname.securityofficer" coloroverride="0.57,0.48,0.43">
       <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,256,128,128" origin="0.5,0.5" />
       <Description tag="talentdescription.apprenticeshipjob">
@@ -385,7 +348,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_apprenticeship_mechanic" nameidentifier="jobname.mechanic" coloroverride="0.5,0.86,0.9">
       <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,256,128,128" origin="0.5,0.5" />
       <Description tag="talentdescription.apprenticeshipjob">
@@ -401,7 +363,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_apprenticeship_engineer" nameidentifier="jobname.engineer" coloroverride="0.88,0.72,0.43">
       <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,256,128,128" origin="0.5,0.5" />
       <Description tag="talentdescription.apprenticeshipjob">
@@ -417,7 +378,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_apprenticeship_assistant" nameidentifier="jobname.assistant">
       <Icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,256,128,128" origin="0.5,0.5" />
       <Description tag="talentdescription.apprenticeshipjob">
@@ -523,7 +483,6 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-
     <Talent identifier="ntsp_injectorgeneral">
       <Icon texture="%ModDir%/Images/MainAtlas.png" sheetindex="6,0" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_injectorgeneral"></Description>
@@ -585,11 +544,5 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="autoinjectorheadset" />
     </Talent>
-
-
-
-
-
-    
   </Talents>
 </Override>

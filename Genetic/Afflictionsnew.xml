@@ -68,15 +68,23 @@
     </Effect>
     <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="768,896,128,128" origin="0,0" />
   </Affliction>
-  <Affliction name="Crawler Broodmother Genes" description="" identifier="crawlerbroodmothereffect" isbuff="true" type="geneticmaterialbuff" limbspecific="false" indicatorlimb="Torso" hideiconafterdelay="true" showiconthreshold="0" treatmentthreshold="100" maxstrength="100">
-    <Effect minstrength="0" maxstrength="99">
-      <StatusEffect type="OnDamaged" target="LastLimb" checkconditionalways="true" comparison="and" delay="0.25" stackable="false">
-        <RequiredAffliction type="damage,burn" minstrength="5" />
+  
+  <Affliction identifier="crawlerbroodmothereffect" type="geneticmaterialbuff" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" hideiconafterdelay="true" treatmentthreshold="1000" maxstrength="100">
+    <Effect tag="crawlerbroodmother" minstrength="0" maxstrength="100">
+      <StatusEffect type="OnDamaged" target="Character" delay="0.25" stackable="false">
+        <RequiredAffliction type="damage,burn" />
         <Conditional isdead="false" />
-        <Conditional inwater="true" />
-        <SpawnItem identifier="smallcrawlereggfrendlytimmed" spawnposition="This" count="1" rotationtype="Random" />
+        <SpawnCharacter speciesname="Crawler_hatchling" totalmaxcount="5" afflictiononspawn="" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="768,896,128,128" origin="0,0" />
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="4,0" sheetelementsize="128,128" origin="0,0" />
   </Affliction>
+
+
+
+
+
+
+
+  
 </Afflictions>
