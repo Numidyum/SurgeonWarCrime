@@ -27,16 +27,33 @@
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
-    <Talent identifier="ntsp_warcriminal">
+
+    <Talent identifier="ntsp_ntgeneomaniac">
       <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128" />
-      <Description tag="talentdescription.geneharvester">
-        <Replace tag="[probability]" value="45" color="gui.green" />
+      <Description tag="talentdescription.geneharvesternew">
+        <Replace tag="[probability1]" value="45" color="gui.green" />
+        <Replace tag="[probability2]" value="25" color="gui.green" />
       </Description>
-      <AbilityGroupEffect abilityeffecttype="OnRoundEnd">
+      <Description tag="talentdescription.geneticmaterialrefineflatbonus">
+        <Replace tag="[amount]" value="40" color="gui.green" />
+        </Description>
+        <Description tag="talentdescription.geneticmaterialtaintedprobabilityreductiononcombine">
+        <Replace tag="[amount]" value="100" color="gui.green" />
+      </Description>
+
+<AbilityGroupEffect abilityeffecttype="OnRoundEnd">
         <Abilities>
-          <CharacterAbilityResetPermanentStat statidentifier="NTgeneharvester_*" value="1" setvalue="true" />
+          <CharacterAbilityResetPermanentStat statidentifier="geneharvester_*" value="1" setvalue="true" />
         </Abilities>
       </AbilityGroupEffect>
+
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1.0" />
+          <CharacterAbilityGiveStat stattype="GeneticMaterialRefineBonus" value="40" />
+        </Abilities>
+      </AbilityGroupEffect>
+
       <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
         <Conditions>
           <AbilityConditionCharacter targettype="Monster">
@@ -56,37 +73,68 @@
             </StatusEffects>
           </CharacterAbilityApplyStatusEffects>
         </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnLootCharacter">
         <Conditions>
-          <AbilityConditionCharacter targettype="Monster" />
-          <AbilityConditionCharacterNotLooted identifier="NTgeneharvester" />
+          <AbilityConditionCharacter targettype="Monster">
+            <Conditional maxhealth="gt 25" />
+            <Conditional ismachine="false" />
+            <Conditional ispet="false" />
+          </AbilityConditionCharacter>
+          <AbilityConditionCharacterNotLooted identifier="geneharvester" />
+          <AbilityConditionServerRandom randomchance="0.25" />
         </Conditions>
         <Abilities>
-          <CharacterAbilityMarkAsLooted identifier="NTgeneharvester" />
+          <CharacterAbilityApplyStatusEffects>
+            <StatusEffects>
+              <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true">
+                <SpawnItem identifiers="geneticmaterial_unresearched2" spawnposition="ThisInventory" />
+              </StatusEffect>
+            </StatusEffects>
+          </CharacterAbilityApplyStatusEffects>
         </Abilities>
       </AbilityGroupEffect>
-      <Description tag="talentdescription.geneticmaterialtaintedprobabilityreductiononcombine">
-        <Replace tag="[amount]" value="100" color="gui.green" />
-      </Description>
+
+    </Talent>
+
+    <Talent identifier="ntsp_ntgeneomaniac2">
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,6" sheetelementsize="128,128" />
       <Description tag="talentdescription.unlockrecipe">
         <Replace tag="[itemname]" value="entityname.advancedgenesplicer" color="gui.orange" />
       </Description>
-      <AbilityGroupEffect abilityeffecttype="None">
-        <Abilities>
-          <CharacterAbilityGiveStat stattype="GeneticMaterialTaintedProbabilityReductionOnCombine" value="1" />
-        </Abilities>
-      </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="advancedgenesplicer" />
-      <Description tag="talentdescription.geneticmaterialrefineflatbonus">
-        <Replace tag="[amount]" value="40" color="gui.green" />
-      </Description>
-      <AbilityGroupEffect abilityeffecttype="None">
-        <Abilities>
-          <CharacterAbilityGiveStat stattype="GeneticMaterialRefineBonus" value="40" />
-        </Abilities>
-      </AbilityGroupEffect>
+      <Description tag="talentdescription.genetampering">
+      <Replace tag="[healthamount]" value="10" color="gui.green"/>
+      <Replace tag="[movementspeed]" value="5" color="gui.green"/>
+    </Description>
+        
+ 
+        
+
+      <AbilityGroupInterval interval="0.9">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="genetampering" amount="1.0"/>
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+       <AddedRecipe itemidentifier="advancedgenesplicer" />
+       <AddedStoreItem itemtag="blackmarketgenes" />
     </Talent>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <Talent identifier="ntsp_underpressure">
       <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,4" sheetelementsize="128,128" />
       <Description tag="talentdescription.ntsp_underpressure">
@@ -191,7 +239,7 @@
       </Description>
       <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
         <Abilities>
-          <CharacterAbilityPutItem itemidentifier="suture1" amount="3" />
+          <CharacterAbilityPutItem itemidentifier="suture" amount="3" />
           <CharacterAbilityPutItem itemidentifier="bloodpackominus" amount="1" />
           <CharacterAbilityPutItem itemidentifier="opium" amount="1" />
         </Abilities>

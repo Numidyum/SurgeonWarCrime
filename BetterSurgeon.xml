@@ -3,20 +3,6 @@
   <Item name="Surgeon Uniform" identifier="surgeonuniform" descriptionidentifier="surgeonclothes" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,storage_clothing,sterile" scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="crewcab" />
     <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.01" />
-    <Price baseprice="150" minavailable="1">
-      <Price storeidentifier="merchantoutpost" minavailable="1" />
-      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="1" />
-      <Price storeidentifier="merchantresearch" minavailable="1" />
-      <Price storeidentifier="merchantmilitary" minavailable="1" />
-      <Price storeidentifier="merchantmine" minavailable="1" />
-    </Price>
-    <Deconstruct time="10">
-      <Item identifier="organicfiber" />
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="mechanical" level="30" />
-      <RequiredItem identifier="organicfiber" />
-    </Fabricate>
     <InventoryIcon name="surgeonuniform" texture="Content/Items/InventoryIconAtlas.png" sourcerect="127,321,64,64" origin="0.5,0.5" />
     <Sprite name="surgeonuniform" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="504,84,123,60" depth="0.6" origin="0.5,0.5" />
     <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />

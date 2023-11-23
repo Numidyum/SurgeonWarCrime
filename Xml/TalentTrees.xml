@@ -18,8 +18,9 @@
         <TalentOptions>
           <TalentOption identifier="ntsp_underpressure" />
         </TalentOptions>
-        <TalentOptions>
-          <TalentOption identifier="ntsp_warcriminal" />
+        <TalentOptions requiredtalents="1" maxchosentalents="2">
+          <TalentOption identifier="ntsp_ntgeneomaniac" />
+          <TalentOption identifier="ntsp_ntgeneomaniac2" />
         </TalentOptions>
         <TalentOptions>
           <TalentOption identifier="ntsp_bedsidemanner" />

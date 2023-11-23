@@ -22,6 +22,11 @@
   <entityname.experimentaltreatment>Experimental treatment</entityname.experimentaltreatment>
   <entitydescription.experimentaltreatment>A highly experimental drug that can cause either a little or a lot of good or bad.</entitydescription.experimentaltreatment>
   <!-- AFFLICTIONS -->
+  <talentdescription.geneharvesternew>When looting a monster, there is a [probability1]% chance of finding a genetic material on it, Or there is a [probability2]% chance of finding advanced genetic material on it.</talentdescription.geneharvesternew>
+  <entityname.unidentifiedgeneticmaterial2>Unidentified Genetic Material‖color:gui.itemqualitycolorgood‖(Good quality)‖end‖</entityname.unidentifiedgeneticmaterial2>
+
+
+
   <afflictionname.preventativepermit>Preventative Permit</afflictionname.preventativepermit>
   <afflictiondescription.preventativepermit>Serious injury is less likely.</afflictiondescription.preventativepermit>
   <afflictionname.artificialbrain>Artificial brain</afflictionname.artificialbrain>
@@ -44,8 +49,8 @@
   <talenttree.fieldsurgeon>Field surgeon</talenttree.fieldsurgeon>
   <talentname.ntsp_autoimmune>Autoimmunosuppression</talentname.ntsp_autoimmune>
   <talentdescription.ntsp_autoimmune>Organs that you transplant never get rejected.</talentdescription.ntsp_autoimmune>
-  <talentname.ntsp_warcriminal>War Criminal</talentname.ntsp_warcriminal>
-  <talentdescription.ntsp_warcriminal>When you or another crewmember kills a monster while outside your submarine, you have a [amount]% chance of finding a random genetic material on it.</talentdescription.ntsp_warcriminal>
+  <talentname.ntsp_ntgeneomaniac>Genetic Criminal</talentname.ntsp_ntgeneomaniac>
+  <talentname.ntsp_ntgeneomaniac2>Genetic Researcher</talentname.ntsp_ntgeneomaniac2>
   <talentname.ntsp_surgeonsintuition>Surgeon's Intuition</talentname.ntsp_surgeonsintuition>
   <talentdescription.ntsp_surgeonsintuition>Whenever you open an Medical (or alien) container for the first time, you have a [probability]% chance of finding additional items.</talentdescription.ntsp_surgeonsintuition>
   <talentname.ntsp_unspecialisedspecialist>Unspecialised Specialist</talentname.ntsp_unspecialisedspecialist>

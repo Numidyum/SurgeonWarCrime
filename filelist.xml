@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="War Criminal Surgeon" modversion="1.6" corepackage="False" steamworkshopid="3089988568" gameversion="1.1.19.3">
+<contentpackage name="War Criminal Surgeon" modversion="1.8" corepackage="False" steamworkshopid="3089988568" gameversion="1.1.19.3">
   <Item file="%ModDir%/Xml/items.xml" />
   <Jobs file="%ModDir%/Xml/Jobs.xml" />
   <Item file="%ModDir%/BetterSurgeon.xml" />
@@ -22,4 +22,5 @@
   <Item file="%ModDir%/Genetic/GeneSplicers.xml" />
   <Other file="%ModDir%/Genetic/Appendages/watchereffect.xml" />
   <Character file="%ModDir%/CharactersAppendagesHusked/watchhusk.xml" />
+  <Afflictions file="%ModDir%/Afflictions.xml" />
 </contentpackage>
