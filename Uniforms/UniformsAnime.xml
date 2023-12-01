@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+ 
+
+<Item name="Captain Uniform Hightech" identifier="captainuniformhightech" aliases="captainuniformhightech" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
+
+<PreferredContainer primary="crewcab" />
+
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+
+ <InventoryIcon name="Captain Uniform Hightech" texture="Content/Items/Jobgear/OutfitIcons.png" sourcerect="0,27,128,101" origin="0.5,0.5" />
+ <Sprite name="Captain Uniform Hightech" texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="247,209,125,77" depth="0.6" origin="0.5,0.5" />
+ <Body width="100" height="50" density="30" friction="0.8" restitution="0.01" />
+ <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+
+<sprite name="Captain Uniform High Tech" texture="%ModDir%/Uniforms/captainhightech_[GENDER].png" limb="Torso" depthlimb="Jaw" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="false" sourcerect="160,0,112,256" origin="0.5,0.4" />
+      <sprite name="Captain Uniform Right Hand" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="RightHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Left Hand" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Right Lower Arm" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Left Lower Arm" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Right Upper Arm" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="RightArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Left Upper Arm" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Waist" texture="%ModDir%/Uniforms/captainhightech_[GENDER].png" limb="Waist" hidelimb="true" inherittexturescale="true" inheritorigin="false" origin="0.5,0.45" inheritsourcerect="false" sourcerect="155,202,117,40" />
+      <sprite name="Captain Uniform Right Thigh" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Left Thigh" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Right Leg" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Left Leg" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Right Shoe" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Captain Uniform Left Shoe" texture="%ModDir%/Uniforms/captainhightech_female.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds,bleeding,gunshotwound" damagemultiplier="0.8" />
+      <SkillModifier skillidentifier="helm" skillvalue="15" />
+      <SkillModifier skillidentifier="weapons" skillvalue="10" />
+      </Wearable>
+      <ItemContainer capacity="2">
+      <Containable items="smallitem" excludeditems="storage_clothing,toolbox,toolbelt" />
+      </ItemContainer>
+      </Item>
+
+</Items>

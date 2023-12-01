@@ -145,6 +145,7 @@
       </AppropriateOrders>
     </Job>
   </Override>
+  
   <Override>
     <Job identifier="medicaldoctor" minkarma="30" uicolor="0.81,0.31,0.19" vitalitymodifier="10" pricemultiplier="1.15" idlebehavior="Active">
       <Jobicon>

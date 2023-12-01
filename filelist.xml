@@ -3,6 +3,7 @@
   <Item file="%ModDir%/Xml/items.xml" />
   <Jobs file="%ModDir%/Xml/Jobs.xml" />
   <Item file="%ModDir%/BetterSurgeon.xml" />
+  <Item file = "%ModDir%/Uniforms/UniformsAnime.xml" />
   <Item file="%ModDir%/BetterSurgeonanime.xml" />
   <Text file="%ModDir%/Localization/English/English.xml" />
   <Talents file="%ModDir%/Xml/TalentsSurgeon.xml" />

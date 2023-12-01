@@ -29,5 +29,228 @@
         </StatusEffect>
       </Projectile>
     </Item>
-  </Override>
+
+<Item name="" identifier="livertransplant" description="" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3,fooditem">
+    <Price baseprice="1000" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="1"/>
+    </Price>
+    <Sprite texture="%ModDir:2776270649%/Images/InGameItemIconAtlas.png" sourcerect="5,479,79,52" depth="0.6" origin="0.5,0.5"/>
+    <Body width="39" height="18" density="10"/>
+    <Deconstruct/>
+  
+
+      <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="10,-30" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+
+         <!-- Regular eating -->
+        <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Affliction identifier="nausea" amount="0.2"/>
+          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+
+         <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+        <Conditional condition="gte 90" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+     </Throwable>
+    <SkillRequirementHint identifier="medical" level="40"/>
+    </Item>
+
+
+  <Item name="" identifier="livertransplant_q1" variantof="livertransplant" category="hidden">
+    <Price baseprice="200" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="false"/>
+    </Price>
+  </Item>
+
+<Item name="" identifier="lungtransplant" description="" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+    <Price baseprice="2000" soldbydefault="false">
+      <Price locationtype="research" multiplier="1" sold="true" minavailable="2"/>
+    </Price>
+    <Sprite texture="%ModDir:2776270649%/Images/InGameItemIconAtlas.png" sourcerect="91,480,84,84" depth="0.6" origin="0.5,0.5"/>
+    <Body width="30" height="30" density="10"/>
+    <Deconstruct/>
+
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="10,-30" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+      
+      <!-- Regular eating -->
+        <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Affliction identifier="nausea" amount="0.2"/>
+          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+        <Conditional condition="gte 90" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="40"/>
+
+  </Item>
+  <Item name="" identifier="lungtransplant_q1" variantof="lungtransplant" category="hidden">
+    <Price baseprice="400" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="false"/>
+    </Price>
+  </Item>
+
+<Item name="" identifier="kidneytransplant" description="" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+    <Price baseprice="400" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="true" multiplier="0.9" minavailable="2"/>
+    </Price>
+    <Sprite texture="%ModDir:2776270649%/Images/InGameItemIconAtlas.png" sourcerect="193,481,32,47" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="20" density="10"/>
+    <Deconstruct/>
+
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+
+      <!-- Regular eating -->
+        <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Affliction identifier="nausea" amount="0.2"/>
+          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+        <Conditional condition="gte 90" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="40"/>
+
+  </Item>
+  <Item name="" identifier="kidneytransplant_q1" variantof="kidneytransplant" category="hidden">
+    <Price baseprice="100" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="false"/>
+    </Price>
+  </Item>
+
+ <Item name="" identifier="hearttransplant" description="" scale="0.4" useinhealthinterface="True" impactsoundtag="impact_soft" cargocontaineridentifier="organcrate" impacttolerance="5.5" Tags="smallitem,organ,petfood1,petfood2,petfood3">
+    <Price baseprice="4000" soldbydefault="false">
+      <Price locationtype="research" multiplier="1" sold="true" minavailable="2"/>
+    </Price>
+    <Sprite texture="%ModDir:2776270649%/Images/InGameItemIconAtlas.png" sourcerect="238,479,28,54" depth="0.6" origin="0.5,0.5"/>
+    <Body width="14" height="22" density="10"/>
+    <Deconstruct/>
+
+    <Throwable characterusable="true" slots="Any,RightHand,LeftHand"
+               throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+
+      <!-- Regular eating -->
+        <StatusEffect type="OnUse" target="This" Condition="-4.0">
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character" comparison="And">
+          <Affliction identifier="nausea" amount="0.2"/>
+          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+
+      <!-- making the organ go kaputt if left outside of refrigeration -->
+      <StatusEffect type="Always" target="This" condition="-0.5">
+        <Conditional hastag="neq refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnContained" target="This" condition="0.1" comparison="and">
+        <Conditional condition="gte 90" />
+        <Conditional hastag="refrigerated" targetcontainer="true" />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-25.0" />
+      <!-- yuck! organs on the floor! -->
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
+        <Affliction identifier="nausea" amount="0.2"/>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove/>
+      </StatusEffect>
+    </Throwable>
+    <SkillRequirementHint identifier="medical" level="40"/>
+
+  </Item>
+  <Item name="" identifier="hearttransplant_q1" variantof="hearttransplant" category="hidden">
+    <Price baseprice="600" soldbydefault="false">
+      <Price storeidentifier="merchantmedical" sold="false"/>
+    </Price>
+  </Item>
+
+</Override>
 </Items>
