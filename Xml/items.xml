@@ -52,8 +52,8 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Affliction identifier="nausea" amount="0.2"/>
-          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Affliction identifier="nausea" amount="0.9"/>
+          <ReduceAffliction type="bloodloss" amount="0.6" />
           <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -71,7 +71,7 @@
       <StatusEffect type="OnFire" target="This" Condition="-25.0" />
       <!-- yuck! organs on the floor! -->
       <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-        <Affliction identifier="nausea" amount="0.2"/>
+        <Affliction identifier="nausea" amount="0.9"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -108,8 +108,8 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Affliction identifier="nausea" amount="0.2"/>
-          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Affliction identifier="nausea" amount="0.9"/>
+          <ReduceAffliction type="bloodloss" amount="0.6" />
           <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -127,7 +127,7 @@
       <StatusEffect type="OnFire" target="This" Condition="-25.0" />
       <!-- yuck! organs on the floor! -->
       <StatusEffect type="OnNotContained" target="NearbyCharacters" range="300">
-        <Affliction identifier="nausea" amount="0.2"/>
+        <Affliction identifier="nausea" amount="0.9"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove/>
@@ -163,8 +163,8 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Affliction identifier="nausea" amount="0.2"/>
-          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Affliction identifier="nausea" amount="0.9"/>
+          <ReduceAffliction type="bloodloss" amount="0.6" />
           <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -218,8 +218,8 @@
         <StatusEffect type="OnUse" target="This" Condition="-4.0">
         </StatusEffect>
         <StatusEffect type="OnUse" target="Character" comparison="And">
-          <Affliction identifier="nausea" amount="0.2"/>
-          <ReduceAffliction type="bloodloss" amount="0.2" />
+          <Affliction identifier="nausea" amount="0.9"/>
+          <ReduceAffliction type="bloodloss" amount="0.6" />
           <Sound file="%ModDir%/Sounds/EatingOrgans.ogg" loop="True" range="200" volume="5.0" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">

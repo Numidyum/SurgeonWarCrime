@@ -336,7 +336,7 @@
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
           <CharacterAbilityGiveResistance resistance="blunttrauma" multiplier="0.25" />
-          <!-- <CharacterAbilityModifyResistance resistanceid="stun" resistance="0.3"/> -->
+          <CharacterAbilityModifyResistance resistanceid="stun" resistance="0.3"/>
         </Abilities>
       </AbilityGroupEffect>
     </Talent>
